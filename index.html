@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Te quiero mucho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="content">
+    <h1>Hola. Te quiero mucho, Zorra.</h1>
+    <div class="hearts">
+      <span class="heart" onclick="showImage(0)">💖</span>
+      <span class="heart" onclick="showImage(1)">💗</span>
+      <span class="heart" onclick="showImage(2)">💕</span>
+      <span class="heart" onclick="showImage(3)">❤️‍🩹</span>
+    </div>
+
+    <div class="image-container" id="image-container">
+      <img id="image-1" src="https://i.pinimg.com/736x/be/da/23/beda2380ddceaa81fa0e650b767a6650.jpg" alt="Imagen 1">
+      <img id="image-2" src="https://i.pinimg.com/736x/15/62/54/156254fb8fd4b6b1033657909e3b72eb.jpg" alt="Imagen 2">
+      <img id="image-3" src="https://i.pinimg.com/736x/88/46/47/8846472807e138f872805928438edb37.jpg" alt="Imagen 3">
+      <img id="image-4" src="https://i.pinimg.com/736x/0a/13/c8/0a13c8460fd1fd64ec723b6d4954e97d.jpg" alt="Imagen 4">
+    </div>
+  </div>
+
+  <script>
+    function showImage(index) {
+      const images = document.querySelectorAll('.image-container img');
+      const container = document.getElementById('image-container');
+
+      // Ocultar todas las imágenes
+      images.forEach(img => img.style.display = 'none');
+
+      // Mostrar la imagen seleccionada
+      images[index].style.display = 'block';
+
+      // Mostrar el contenedor de imágenes
+      container.style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
